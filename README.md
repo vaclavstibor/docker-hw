@@ -1,7 +1,5 @@
 # Getting Started with this React App
 
-## Available Scripts
-
 First of all install .gitignore node_modules
 
 ### `npm install`
