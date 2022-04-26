@@ -2,11 +2,11 @@
 
 ## Available Scripts
 
-(1) First of all install .gitignore node_modules
+First of all install .gitignore node_modules
 
 ### `npm install`
 
-(2) In the project directory, then you can run:
+Then in the project directory you can run:
 
 ### `npm start`
 
