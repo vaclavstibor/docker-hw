@@ -1,12 +1,5 @@
 # Getting Started with this React App
 
-First of all install (.gitignore) node_modules
+Run this command in root dir
 
-### `npm install`
-
-Then in the project directory you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `docker run -it -p 3000:3000 docker-hw-image:dev`
