@@ -4,15 +4,6 @@ import { Button } from 'reactstrap'
 import './../App.css'
 
 export default class IncrementPage extends Component {
-  state = {
-    counter: this.props.data.counter
-  }
-
-  change = () => {
-    this.props.data.change(this.state.counter)
-    this.setState({ counter: this.state.counter + 1 })
-    document.getElementById("Counter-output").innerHTML = this.state.counter
-  }
 
   render() {
     return (    
@@ -21,9 +12,9 @@ export default class IncrementPage extends Component {
           <h2>Increment Page</h2>
   
           <div className="Counter">
-            <label id="Counter-output"> { this.state.counter } </label>
+            <label id="Counter-output"> { this.props.counter } </label>
             <div className="Btn-containter">
-              <Button color="success" className="Control-btn" onClick={ this.change }>Increment</Button>
+              <Button color="success" className="Control-btn" onClick={ this.props.increment }>Increment</Button>
             </div>
           </div>
         </header>

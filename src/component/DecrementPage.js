@@ -4,15 +4,6 @@ import { Button } from 'reactstrap'
 import './../App.css'
 
 export default class Decrement extends Component {
-    state = {
-      counter: this.props.data.counter
-    }
-  
-    change = () => {
-      this.props.data.change(this.state.counter)
-      this.setState({ counter: this.state.counter - 1 })
-      document.getElementById("Counter-output").innerHTML = this.state.counter
-    }
 
     render() {
         return (    
@@ -21,13 +12,13 @@ export default class Decrement extends Component {
                 <h2>Decrement Page</h2>
       
                 <div className="Counter">
-                <label id="Counter-output"> { this.state.counter } </label>
+                <label id="Counter-output"> { this.props.counter } </label>
                 <div className="Btn-containter">
-                  <Button color="danger" className="Control-btn" onClick={ this.change }>Decrement</Button>
+                  <Button color="danger" className="Control-btn" onClick={ this.props.decrement }>Decrement</Button>
                 </div>
               </div>
               </header>
             </div>
-          );
+          )
     }
 }

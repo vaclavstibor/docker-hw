@@ -9,7 +9,8 @@ export default class App extends Component {
   
   state = { counter: 0 }
 
-  change(value) { this.setState({ counter: value }) }
+  increment() { this.setState({ counter: this.state.counter + 1})}
+  decrement() { this.setState({ counter: this.state.counter - 1})}
 
   render(){
     return (
@@ -30,8 +31,8 @@ export default class App extends Component {
               </ul>
             <Routes>
                 <Route exact path='/' element={< MainPage />}></Route>
-                <Route exact path='/IncrementPage' element={< IncrementPage data={ { counter: this.state.counter, change: this.change.bind(this) } }/>}></Route>
-                <Route exact path='/DecrementPage' element={< DecrementPage data={ { counter: this.state.counter, change: this.change.bind(this) } }/>}></Route>
+                <Route exact path='/IncrementPage' element={< IncrementPage counter={this.state.counter} increment={this.increment.bind(this)} />}></Route>
+                <Route exact path='/DecrementPage' element={< DecrementPage counter={this.state.counter} decrement={this.decrement.bind(this) } />}></Route>
             </Routes>
             </div>
           </header>
