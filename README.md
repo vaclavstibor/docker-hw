@@ -1,6 +1,6 @@
 # Getting Started with this React App
 
-Run this two commands in root dir
+Run this two commands in the root dir
 
 ### `docker build -t docker-hw .`
 
